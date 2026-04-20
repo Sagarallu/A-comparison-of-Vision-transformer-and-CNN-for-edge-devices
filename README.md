@@ -125,3 +125,78 @@ Autonomous vehicle/
 ├── performance_log.xlsx             # Performance metrics
 └── main.py                          # Entry point
 ```
+## Setup & Requirements
+
+```bash
+Python >= 3.8
+PyTorch >= 1.12
+timm
+opencv-python
+numpy
+matplotlib
+carla
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+**1. Launch CARLA server**
+```bash
+./CarlaUE4.sh -quality-level=Epic -fps=30
+```
+
+**2. Collect data**
+```bash
+python _data_collection/data_collector.py
+```
+
+**3. Run comparison**
+```bash
+python Autonomous_VIT_CNN.py
+```
+
+**4. View benchmark results**
+```bash
+python thesis_test.py
+```
+
+---
+
+## Applications
+
+Findings from this benchmark are applicable to:
+- **Self-driving vehicles** — camera-based perception modules
+- **Mobile robots** — navigation and obstacle avoidance on edge hardware
+- **Embedded AI systems** — architecture selection under memory and
+  compute constraints
+
+---
+
+## Author
+
+**Sagar Allu**
+Thesis Project — [Your University Name]
+
+---
+
+## Citation
+
+```bibtex
+@thesis{allu2025cnnvit,
+  title  = {A Comparison of Vision Transformer and CNN for Edge Devices},
+  author = {Sagar Allu},{Dr.Aditya Mushyam}
+  school = {University of Europe for Applied sciences,Potsdam},
+  year   = {2025}
+}
+```
+
+---
+
+## License
+
+This repository is released for academic and research use only.
