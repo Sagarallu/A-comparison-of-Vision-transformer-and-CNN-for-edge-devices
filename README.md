@@ -50,15 +50,24 @@ autonomous perception — and under what conditions?**
 
 ## Benchmark Results
 
-Evaluated inside **CARLA simulator** — ClearNoon weather, 10 vehicles, 10 walkers.
+Evaluated inside **CARLA Simulator** — 10/30/50 vehicles, 10/30 walkers across weather conditions.
 
-### Inference Time Comparison
+### Inference Time: ViT vs CNN
 
-| Model | Avg Inference Time (ms) | Avg FPS | Speed vs ViT |
-|-------|------------------------|---------|--------------|
-| ViT   | ~655 ms                | ~1.5    | 1x (baseline)|
-| CNN   | ~85 ms                 | ~11.7   | 7.7x faster  |
+| Weather Condition | Frames Tested | ViT Avg (ms) | CNN Avg (ms) | ViT FPS | CNN FPS | CNN Speedup |
+|-------------------|--------------|-------------|-------------|---------|---------|-------------|
+| ClearNoon         | 300          | 673.0 ms    | 93.7 ms     | 1.49    | 10.68   | **7.2x faster** |
+| CloudyNoon        | 36           | 747.2 ms    | 106.5 ms    | 1.34    | 9.39    | **7.0x faster** |
 
+### Key Findings
+
+- CNN is **~7x faster** than ViT across all tested conditions
+- ViT inference degrades further under **CloudyNoon** (+74ms vs ClearNoon)
+- CNN remains **stable** across weather conditions (~13ms variance)
+- CNN is significantly more suitable for **real-time autonomous deployment**
+- ViT's higher computational cost makes it challenging for **edge devices**
+
+> Full frame-by-frame benchmark data available in `benchmark_results.xlsx`
 ### Key Findings
 
 - CNN is approximately **7.7x faster** than ViT in real-time inference
