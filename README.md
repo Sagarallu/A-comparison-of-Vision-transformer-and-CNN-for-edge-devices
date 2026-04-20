@@ -74,3 +74,27 @@ CARLA provides:
 ---
 
 ## Project Structure
+
+```
+Autonomous vehicle/
+├── agents/                          # CARLA agent scripts
+├── _data_collection/                # Raw data from CARLA
+├── recorded_data/                   # Recorded sensor data
+├── recorded_images/                 # Captured frames
+├── manual_data/                     # Manual driving data
+├── PythonAPI/                       # CARLA Python API
+├── yolov5-master/                   # YOLOv5 integration
+│
+├── Autonomous_VIT_CNN.py            # Main comparison script
+├── Autonomus.py                     # Core autonomous driving
+├── faster_cnn.py                    # Faster CNN implementation
+├── Yolo_CNN.py                      # YOLO + CNN hybrid
+├── thesis_test.py                   # Thesis evaluation
+│
+├── cnn_model.onnx                   # Exported CNN model
+├── vit_model.onnx                   # Exported ViT model
+│
+├── benchmark_results.xlsx           # Benchmark data
+├── performance_log.xlsx             # Performance metrics
+└── main.py                          # Entry point
+```
