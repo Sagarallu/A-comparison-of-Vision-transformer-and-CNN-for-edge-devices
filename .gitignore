@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Large data folders
+_data_collection/
+recorded_data/
+recorded_images/
+manual_data/
+_out/
+
+# NumPy data files
+*.npy
+
+# Large model files
+*.onnx
+
+# YOLOv5
+yolov5-master/
+
+# Excel logs
+perf_log.xlsx
+performance_log.xlsx
+
+# CARLA screenshots
+*.png
+*.json
+Add.gitignore
