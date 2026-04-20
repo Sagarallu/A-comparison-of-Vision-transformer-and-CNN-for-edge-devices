@@ -50,19 +50,25 @@ autonomous perception — and under what conditions?**
 
 ## Benchmark Results
 
-All models were evaluated inside the CARLA simulator under identical conditions.
+Evaluated inside **CARLA simulator** — ClearNoon weather, 10 vehicles, 10 walkers.
 
-| Model        | Accuracy (%) | Inference Time (ms) | FPS  | Parameters  | Memory (MB) |
-|--------------|-------------|---------------------|------|-------------|-------------|
-| CNN          | xx.x        | xx.x                | xx   | xxM         | xxx         |
-| Faster CNN   | xx.x        | xx.x                | xx   | xxM         | xxx         |
-| SSD CNN      | xx.x        | xx.x                | xx   | xxM         | xxx         |
-| YOLO CNN     | xx.x        | xx.x                | xx   | xxM         | xxx         |
-| ViT          | xx.x        | xx.x                | xx   | xxM         | xxx         |
-| ViT+CNN      | xx.x        | xx.x                | xx   | xxM         | xxx         |
+### Inference Time Comparison
 
-> Full benchmark data available in `benchmark_results.xlsx`
----
+| Model | Avg Inference Time (ms) | Avg FPS | Speed vs ViT |
+|-------|------------------------|---------|--------------|
+| ViT   | ~655 ms                | ~1.5    | 1x (baseline)|
+| CNN   | ~85 ms                 | ~11.7   | 7.7x faster  |
+
+### Key Findings
+
+- CNN is approximately **7.7x faster** than ViT in real-time inference
+- ViT inference time ranges from **623ms to 682ms** per frame
+- CNN inference time ranges from **76ms to 92ms** per frame
+- CNN is significantly more suitable for **real-time edge deployment**
+- ViT may be preferred where **accuracy over speed** is the priority
+
+> Full frame-by-frame data available in `benchmark_results.xlsx`
+
 
 ## Simulator: CARLA
 
