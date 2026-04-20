@@ -180,7 +180,7 @@ Findings from this benchmark are applicable to:
 ## Author
 
 **Sagar Allu**
-Thesis Project — [Your University Name]
+Master Thesis Project — [University of Europe for Applied Sciences]
 
 ---
 
