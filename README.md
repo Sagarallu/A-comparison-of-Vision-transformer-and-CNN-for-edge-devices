@@ -1,11 +1,12 @@
 # A Comparison of Vision Transformer and CNN for Edge Devices
 > Benchmarking ViT vs CNN for autonomous systems using the CARLA simulator
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-orange)
-![CARLA](https://img.shields.io/badge/CARLA-0.9.x-purple)
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-EE4C2C?logo=pytorch&logoColor=white)
+![CARLA](https://img.shields.io/badge/CARLA-0.9.13-blueviolet)
+![ONNX](https://img.shields.io/badge/ONNX-Export-005CED?logo=onnx&logoColor=white)
+![YOLOv5](https://img.shields.io/badge/YOLOv5-Integrated-00FFAA)
 ![License](https://img.shields.io/badge/License-Academic-green)
-
 ---
 
 ## Overview
@@ -47,17 +48,20 @@ autonomous perception — and under what conditions?**
 
 ---
 
-## Evaluation Metrics
+## Benchmark Results
 
-The following parameters are benchmarked inside the CARLA simulation environment:
+All models were evaluated inside the CARLA simulator under identical conditions.
 
-- **Inference latency** (ms per frame)
-- **Frames per second (FPS)** — real-time capability
-- **Model parameter count**
-- **Memory footprint** (RAM / GPU VRAM)
-- **Top-1 Accuracy / mAP** on CARLA-captured scenes
-- **Robustness** under weather and lighting variations
+| Model        | Accuracy (%) | Inference Time (ms) | FPS  | Parameters  | Memory (MB) |
+|--------------|-------------|---------------------|------|-------------|-------------|
+| CNN          | xx.x        | xx.x                | xx   | xxM         | xxx         |
+| Faster CNN   | xx.x        | xx.x                | xx   | xxM         | xxx         |
+| SSD CNN      | xx.x        | xx.x                | xx   | xxM         | xxx         |
+| YOLO CNN     | xx.x        | xx.x                | xx   | xxM         | xxx         |
+| ViT          | xx.x        | xx.x                | xx   | xxM         | xxx         |
+| ViT+CNN      | xx.x        | xx.x                | xx   | xxM         | xxx         |
 
+> Full benchmark data available in `benchmark_results.xlsx`
 ---
 
 ## Simulator: CARLA
@@ -72,6 +76,14 @@ CARLA provides:
 - Scriptable traffic, pedestrians, and dynamic obstacles
 
 ---
+## Simulation Screenshots
+
+### CARLA Environment
+![Simulation](recorded_images/your_screenshot.png)
+
+### Detection Output
+![Detection](recorded_images/your_detection.png)
+
 
 ## Project Structure
 
